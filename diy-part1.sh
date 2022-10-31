@@ -19,6 +19,6 @@
 #echo 'src-git nas https://github.com/linkease/nas-packages.git' >>feeds.conf.default
 src-git kenzo https://github.com/kenzok8/openwrt-packages
 src-git small https://github.com/kenzok8/small
-src-git nas https://github.com/linkease/nas-packages.git;master
-src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main
+src-git nas https://github.com/linkease/nas-packages
+src-git nasluci https://github.com/linkease/nas-packages-luci
 src-git opentopd  https://github.com/sirpdboy/sirpdboy-package
