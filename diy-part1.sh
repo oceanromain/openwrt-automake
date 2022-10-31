@@ -20,4 +20,4 @@
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 #echo 'src-git poweroff https://github.com/sirpdboy/luci-app-poweroffdevice' >>feeds.conf.default
-echo 'src-git luci-app-ddns-go https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
+echo 'src-git ddnsgo https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
