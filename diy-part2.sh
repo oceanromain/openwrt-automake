@@ -20,11 +20,5 @@ sed -i "s/hostname='OpenWrt'/hostname='Openwrt-BY'/g" ./package/base-files/files
 #增加设置向导
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
 
-#修改upnp
-rm -rf feeds/packages/net/miniupnpd
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/miniupnpd feed/package/net/miniupnpd
-rm -rf feeds/luci/applications/luci-app-upnp
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/luci-app-upnp feed/luci/applications/luci-app-upnp
-
 #安装
 ./scripts/feeds install -af
