@@ -11,5 +11,23 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+#修改默认IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+#修改主机名
+sed -i "/uci commit system/i\uci set system.@system[0].hostname='Openwrt-BY'" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/hostname='OpenWrt'/hostname='Openwrt-BY'/g" ./package/base-files/files/bin/config_generate
+
+#增加设置向导
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
+
+#修改upnp
+rm -rf feeds/packages/net/miniupnpd
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/miniupnpd feed/package/net/miniupnpd
+rm -rf feeds/luci/applications/luci-app-upnp
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/luci-app-upnp feed/luci/applications/luci-app-upnp
+
+#更新
+./scripts/feeds update -a
+
+#安装
+./scripts/feeds install -af
