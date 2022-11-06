@@ -26,8 +26,5 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/miniupnpd feed/p
 rm -rf feeds/luci/applications/luci-app-upnp
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/upnpd/luci-app-upnp feed/luci/applications/luci-app-upnp
 
-#更新
-./scripts/feeds update -a
-
 #安装
 ./scripts/feeds install -af
