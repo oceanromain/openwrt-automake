@@ -23,6 +23,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard packag
 svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
 
 
 #安装
