@@ -18,6 +18,18 @@ sed -i "/uci commit system/i\uci set system.@system[0].hostname='Openwrt-BY'" pa
 sed -i "s/hostname='OpenWrt'/hostname='Openwrt-BY'/g" ./package/base-files/files/bin/config_generate
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.d/10-default.conf
 rm -rf package/lean/autocore
+echo "     _________                                                " > package/base-files/files/etc/banner
+echo "    /        /\      _    ___ ___  ___                        " >> package/base-files/files/etc/banner
+echo "   /  LE    /  \    | |  | __|   \| __|                       " >> package/base-files/files/etc/banner
+echo "  /    DE  /    \   | |__| _|| |) | _|                        " >> package/base-files/files/etc/banner
+echo " /________/  LE  \  |____|___|___/|___|                       " >> package/base-files/files/etc/banner
+echo " \        \   DE /                                            " >> package/base-files/files/etc/banner
+echo "  \    LE  \    /  -------------------------------------------" >> package/base-files/files/etc/banner
+echo "   \  DE    \  /    %D %V, %C                                 " >> package/base-files/files/etc/banner
+echo "    \________\/    -------------------------------------------" >> package/base-files/files/etc/banner
+echo "------------------" >> package/base-files/files/etc/banner
+echo "Openwrt by Starnet" >> package/base-files/files/etc/banner
+echo "------------------" >> package/base-files/files/etc/banner
 
 #增加设置向导
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
