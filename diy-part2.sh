@@ -38,6 +38,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-rebootschedul
 #修改
 sed -i '7s/control/services/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 sed -i 's/R22.11.11/by Starnet 202212/g' ./package/lean/default-settings/files/zzz-default-settings
+chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 
 #安装
 ./scripts/feeds install -af
