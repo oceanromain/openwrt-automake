@@ -36,7 +36,7 @@ svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
 
 #修改
-sed -i '7s/control/services/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
+sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 sed -i 's/R22.11.11/by Starnet 202212/g' ./package/lean/default-settings/files/zzz-default-settings
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 
