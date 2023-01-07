@@ -14,14 +14,15 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
+#echo 'src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
+#echo 'src-git oceanr https://github.com/oceanromain/openwrt-packages.git' >>feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #echo 'src-git nas https://github.com/linkease/nas-packages.git' >>feeds.conf.default
+
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-#echo 'src-git oceanr https://github.com/oceanromain/openwrt-packages.git' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >>feeds.conf.default
 echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >>feeds.conf.default
-#echo 'src-git opentopd  https://github.com/sirpdboy/sirpdboy-package' >>feeds.conf.default
 echo 'src-git ddns_go https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
 echo 'src-git autocore https://github.com/oceanromain/myautocore package/myautocore' >>feeds.conf.default
