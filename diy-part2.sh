@@ -36,6 +36,7 @@ svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotim
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
 
 #修改
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
@@ -47,6 +48,9 @@ chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky
 
 #修复brook
 #rm -rf feeds/small/brook/patches/010-chore-deps-update-iploc-to-fix-build-with-mips.patch
+#修复aguardhome
+rm -rf feeds/kenzo/adguardhome/
+
 
 #安装
 ./scripts/feeds install -af
