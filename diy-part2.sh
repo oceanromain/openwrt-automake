@@ -37,6 +37,7 @@ svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardrop
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
+svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 
 #修改
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
