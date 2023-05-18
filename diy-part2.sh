@@ -38,7 +38,7 @@ svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
 svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
-svn co https://github.com/sirpdboy/chatgpt-web package/luci-app-chatgpt
+git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 
 #修改
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
