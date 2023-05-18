@@ -31,13 +31,14 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #增加设置向导
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wizard package/luci-app-wizard
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netwizard package/luci-app-wizard
 svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
 svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
+svn co https://github.com/sirpdboy/chatgpt-web package/luci-app-chatgpt
 
 #修改
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
