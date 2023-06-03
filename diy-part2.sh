@@ -15,7 +15,7 @@
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 #修改主机名
 sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-StarNet'" package/lean/default-settings/files/zzz-default-settings
-sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-StarNet'/g" ./package/base-files/files/bin/config_generate
+sed -i "s/hostname='OpenWrt'/hostname='OpenWrtStarNet'/g" ./package/base-files/files/bin/config_generate
 #修改连接数
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.conf
 
