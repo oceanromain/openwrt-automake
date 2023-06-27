@@ -57,6 +57,7 @@ sed -i '8d' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua
 sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
+chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
 
 #修复brook
 #rm -rf feeds/small/brook/patches/010-chore-deps-update-iploc-to-fix-build-with-mips.patch
