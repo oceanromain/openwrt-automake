@@ -39,7 +39,7 @@ rm -rf feeds/packages/utils/watchcat
 svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netwizard package/luci-app-wizard
-svn co https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset package/luci-app-autotimeset
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
