@@ -43,7 +43,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset p
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
-#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome package/luci-app-adguardhome
 svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
@@ -62,7 +62,7 @@ chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
 #修复brook
 #rm -rf feeds/small/brook/patches/010-chore-deps-update-iploc-to-fix-build-with-mips.patch
 #修复aguardhome
-rm -rf feeds/kenzo/adguardhome/
+rm -rf feeds/kenzo/luci-app-adguardhome/
 
 
 #安装
