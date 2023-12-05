@@ -58,6 +58,7 @@ sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-defaul
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
 chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
+sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
 
 #修复brook
 #rm -rf feeds/small/brook/patches/010-chore-deps-update-iploc-to-fix-build-with-mips.patch
