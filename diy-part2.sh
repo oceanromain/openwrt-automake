@@ -32,7 +32,7 @@ echo "--------------------------------------------------------------------------
 
 #删除watchcat
 rm -rf feeds/packages/utils/watchcat
-#rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
 
 
 #增加设置向导
