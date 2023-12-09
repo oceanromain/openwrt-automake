@@ -32,11 +32,13 @@ echo "--------------------------------------------------------------------------
 
 #删除watchcat
 rm -rf feeds/packages/utils/watchcat
-rm -rf feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang/golang
 
 
 #增加设置向导
-svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
+# svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
+svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netwizard package/luci-app-wizard
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset package/luci-app-autotimeset
