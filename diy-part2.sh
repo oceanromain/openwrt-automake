@@ -64,7 +64,7 @@ chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
 sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
 
 #修复brook
-rm -rf feeds/small/brook/patches/010-chore-deps-update-iploc-to-fix-build-with-mips.patch
+#rm -rf feeds/small/brook/patches/010*.patch
 #修复aguardhome
 rm -rf feeds/kenzo/luci-app-adguardhome/
 
