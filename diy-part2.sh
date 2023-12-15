@@ -31,6 +31,7 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #删除watchcat
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
 rm -rf feeds/packages/utils/watchcat
 # rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/lang/golang
