@@ -32,14 +32,10 @@ echo "--------------------------------------------------------------------------
 
 #删除watchcat
 #rm -rf feeds/packages/utils/watchcat
-# rm -rf feeds/packages/lang/golang
-#rm -rf feeds/packages/lang/golang
-
+rm -rf feeds/packages/lang/golang
 
 #增加设置向导
-pushd feeds/packages/lang
-rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang
-popd
+svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #git clone https://github.com/gngpp/openwrt_packages_lang_golang feeds/packages/lang/golang
 # svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
 # svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
