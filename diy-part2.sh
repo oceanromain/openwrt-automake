@@ -31,14 +31,14 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #删除watchcat
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
-rm -rf feeds/packages/utils/watchcat
+#rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
+#rm -rf feeds/packages/utils/watchcat
 # rm -rf feeds/packages/lang/golang
-rm -rf feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
 
 
 #增加设置向导
-git clone https://github.com/gngpp/openwrt_packages_lang_golang feeds/packages/lang/golang
+#git clone https://github.com/gngpp/openwrt_packages_lang_golang feeds/packages/lang/golang
 # svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
 # svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
@@ -47,11 +47,11 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset p
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome package/luci-app-adguardhome
-svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome package/luci-app-adguardhome
+#svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
-svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
-git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
+#svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
+#git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 
 
 #修改
@@ -62,12 +62,12 @@ sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-defaul
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
 chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
-sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
+#sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
 #修复aguardhome
-rm -rf feeds/kenzo/luci-app-adguardhome/
+#rm -rf feeds/kenzo/luci-app-adguardhome/
 
 
 #安装
