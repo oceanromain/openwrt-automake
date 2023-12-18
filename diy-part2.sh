@@ -49,8 +49,7 @@ svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedu
 #svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 #svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
-#git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
-git clone https://github.com/KFERMercer/luci-app-tcpdump.git feeds/packages/luci-app-tcpdump
+git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 
 
 
