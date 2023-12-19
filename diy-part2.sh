@@ -31,14 +31,12 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #删除watchcat
-#rm -rf feeds/packages/utils/watchcat
+rm -rf feeds/packages/utils/watchcat
 rm -rf feeds/packages/lang/golang
 
 #增加设置向导
 svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-#git clone https://github.com/gngpp/openwrt_packages_lang_golang feeds/packages/lang/golang
-# svn export https://github.com/gngpp/openwrt_packages_lang_golang/branches/master feeds/packages/lang/golang
-# svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
+
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netwizard package/luci-app-wizard
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset package/luci-app-autotimeset
@@ -48,7 +46,8 @@ svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedu
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome package/luci-app-adguardhome
 #svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
-#svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
+svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
+git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 
 
@@ -57,6 +56,8 @@ git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tc
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 sed -i '7i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
 sed -i '8d' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
+sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+sed -i '9d' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
 sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
 chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
