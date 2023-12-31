@@ -41,11 +41,12 @@ rm -rf feeds/packages/lang/golang
 #git clone https://github.com/xiaoxiao29/luci-app-adguardhome.git package/luci-app-adguardhome
 #svn co https://github.com/kenzok8/small-package/trunk/gn package/gn
 #svn co https://github.com/m16-spsad/sirpdboy-package/trunk/luci-app-rebootschedule package/luci-app-rebootschedule
-svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+#svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netwizard package/luci-app-wizard
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-autotimeset package/luci-app-autotimeset
 #svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-beardropper package/luci-app-beardropper
 #svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
+svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
 git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
