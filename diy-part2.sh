@@ -63,6 +63,7 @@ git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tc
 sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
 sed -i '9d' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
 #sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
+sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reboot/po/zh-cn/advanced-reboot.po
 #chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
 chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
