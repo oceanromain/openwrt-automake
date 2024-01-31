@@ -60,8 +60,8 @@ git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tc
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 #sed -i '7i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
 #sed -i '8d' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
-sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
-sed -i '9d' package/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+sed -i '9d' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
 #sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
 sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reboot/po/zh-cn/advanced-reboot.po
 #chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
