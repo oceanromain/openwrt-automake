@@ -67,6 +67,8 @@ sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reb
 #chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
 chmod +x feeds/oceanweb/luci-app-autotimeset/root/etc/init.d/autotimeset
+chmod +x feeds/oceanweb/luci-app-beardropper/root/etc/init.d/beardropper
+chmod +x feeds/oceanweb/luci-app-cowbping/root/etc/init.d/cowbping
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
