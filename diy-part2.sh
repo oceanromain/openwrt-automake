@@ -66,7 +66,7 @@ sed -i '9d' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.
 sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reboot/po/zh-cn/advanced-reboot.po
 #chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
 chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
-chmod +x package/luci-app-autotimeset/root/etc/init.d/autotimeset
+chmod +x feeds/oceanweb/luci-app-autotimeset/root/etc/init.d/autotimeset
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
