@@ -45,8 +45,10 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/az /opt/google /opt/microsoft
+        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        #kp
         sudo rm -rf "/usr/local/share/boost"
+        #kp
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
@@ -55,10 +57,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        #kp
-        sudo rm -rf "/usr/local/share/boost"
-        #kp
-        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+
 
     - name: Clone source code
       working-directory: /workdir
