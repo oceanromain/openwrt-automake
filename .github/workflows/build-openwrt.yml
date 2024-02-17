@@ -45,10 +45,13 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        docker rmi `docker images -q`
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         #kp
         sudo rm -rf "/usr/local/share/boost"
         sudo rm -rf /opt/az /opt/microsoft
+        sudo rm -rf /etc/mysql
+        sudo rm -rf /etc/php
         #kp
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         sudo -E apt-get -qq update
