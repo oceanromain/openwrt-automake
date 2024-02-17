@@ -48,6 +48,7 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         #kp
         sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf /opt/az /opt/microsoft
         #kp
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         sudo -E apt-get -qq update
