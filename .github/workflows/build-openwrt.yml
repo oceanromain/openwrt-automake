@@ -38,10 +38,21 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Checkout
+    - name: 检查
       uses: actions/checkout@main
+    
+    - name: 释放磁盘空间
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
 
-    - name: Initialization environment
+    - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -51,16 +62,15 @@ jobs:
         sudo -E apt-get -yqq full-upgrade
         sudo -E apt-get -yqq install $(curl -fsSL https://raw.githubusercontent.com/ywt114/diy/main/depends) || true
         sudo -E apt-get -qq install llvm clang
-        docker rmi `docker images -q`
+        #docker rmi `docker images -q`
         sudo -E apt-get -qq purge azure-cli ghc* zulu* llvm* firefox powershell openjdk* dotnet* google* mysql* php* android*
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+        #sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         #kp
-        sudo rm -rf "/usr/local/share/boost"
-        sudo rm -rf /opt/az /opt/microsoft
-        sudo rm -rf /etc/mysql
-        sudo rm -rf /etc/php
-        #kp
-        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        #sudo rm -rf "/usr/local/share/boost"
+        #sudo rm -rf /opt/az /opt/microsoft
+        #sudo rm -rf /etc/mysql
+        #sudo rm -rf /etc/php
+        #sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -68,24 +78,24 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
 
 
-    - name: Clone source code
+    - name: 克隆源代码
       working-directory: /workdir
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: Load custom feeds
+    - name: 加载自定义feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
-    - name: Update feeds
+    - name: 更新feeds
       run: cd openwrt && ./scripts/feeds update -a
       
-    - name: Load custom configuration
+    - name: 加载自定义配置
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
@@ -100,7 +110,7 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
-    - name: Download package
+    - name: 下载
       id: package
       run: |
         cd openwrt
