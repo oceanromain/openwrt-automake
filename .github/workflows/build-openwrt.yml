@@ -71,7 +71,6 @@ jobs:
         #sudo rm -rf /etc/mysql
         #sudo rm -rf /etc/php
         #sudo rm -rf "$AGENT_TOOLSDIRECTORY"
-        sudo -E apt-get -qq install build-essential
         sudo -E apt-get -qq install clang
         sudo -E add-apt-repository ppa:ubuntu-toolchain-r/test
         sudo -E add-apt-repository ppa:ubuntu-toolchain-r/ppa
