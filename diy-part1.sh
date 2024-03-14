@@ -20,8 +20,8 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #echo 'src-git nas https://github.com/linkease/nas-packages.git' >>feeds.conf.default
 
-echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >>feeds.conf.default
 echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >>feeds.conf.default
 echo 'src-git ddns_go https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
