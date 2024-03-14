@@ -34,7 +34,11 @@ echo "--------------------------------------------------------------------------
 rm -rf feeds/packages/utils/watchcat
 rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
-rm -rf feeds/luci/applications/luci-app-mosdns && rm -rf feeds/packages/net/{alist,adguardhome,smartdns}
+rm -rf feeds/luci/applications/luci-app-mosdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
+rm -rf feeds/smpackage/luci-app-adguardhome
+rm -rf feeds/smpackage/luci-app-bypass
 
 
 #增加插件
@@ -50,7 +54,7 @@ rm -rf feeds/luci/applications/luci-app-mosdns && rm -rf feeds/packages/net/{ali
 #svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #git clone https://github.com/oceanromain/golang.git feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 #svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
 git clone https://github.com/oceanromain/watchcat.git feeds/packages/utils/watchcat
