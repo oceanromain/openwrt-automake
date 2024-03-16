@@ -34,11 +34,6 @@ echo "--------------------------------------------------------------------------
 rm -rf feeds/packages/utils/watchcat
 rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
-rm -rf feeds/luci/applications/luci-app-mosdns
-rm -rf feeds/luci/applications/luci-app-smartdns
-rm -rf feeds/packages/net/{alist,adguardhome,mosdns,smartdns}
-rm -rf feeds/smpackage/luci-app-adguardhome
-rm -rf feeds/smpackage/luci-app-bypass
 
 
 #增加插件
