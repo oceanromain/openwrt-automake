@@ -32,7 +32,7 @@ echo "--------------------------------------------------------------------------
 
 #删除watchcat
 #rm -rf feeds/packages/utils/watchcat
-#rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
 
 
@@ -53,9 +53,9 @@ echo "--------------------------------------------------------------------------
 #git clone https://github.com/oceanromain/watchcat.git feeds/packages/utils/watchcat
 #git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 
-#git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
-#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-#git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
+git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 
 #修改
 #sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
