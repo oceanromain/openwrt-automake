@@ -32,7 +32,7 @@ echo "--------------------------------------------------------------------------
 
 #删除watchcat
 #rm -rf feeds/packages/utils/watchcat
-rm -rf feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
 
 
@@ -49,13 +49,13 @@ rm -rf feeds/packages/lang/golang
 #svn co https://github.com/oceanromain/openwrt-packages-1/trunk/luci-app-cowbping package/luci-app-cowbping
 #svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
 #git clone https://github.com/oceanromain/golang.git feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 #svn co https://github.com/openwrt/packages/trunk/utils/watchcat feeds/packages/utils/watchcat
 #git clone https://github.com/oceanromain/watchcat.git feeds/packages/utils/watchcat
 #git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
-git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 
+#git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
+#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+#git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 
 #修改
 #sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
@@ -73,7 +73,6 @@ chmod +x feeds/oceanweb/luci-app-beardropper/root/etc/init.d/beardropper
 chmod +x feeds/oceanweb/luci-app-cowbping/root/etc/init.d/cowbping
 #chmod +x feeds/oceanweb/luci-app-oled/root/etc/init.d/oled
 sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
-sed -i '7i\ uci set luci.main.mediaurlbase=/luci-static/OpenWrt2020' feeds/small/.github/diy/zzz-default-settings
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
