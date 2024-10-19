@@ -73,6 +73,7 @@ chmod +x feeds/oceanweb/luci-app-beardropper/root/etc/init.d/beardropper
 chmod +x feeds/oceanweb/luci-app-cowbping/root/etc/init.d/cowbping
 #chmod +x feeds/oceanweb/luci-app-oled/root/etc/init.d/oled
 sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
+sed -i '7i\ uci set luci.main.mediaurlbase=/luci-static/OpenWrt2020' feeds/small/.github/diy/zzz-default-settings
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
