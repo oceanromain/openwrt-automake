@@ -18,6 +18,7 @@ sed -i "/uci commit system/i\uci set system.@system[0].hostname='StarNet'" packa
 sed -i "s/hostname='OpenWrt'/hostname='OpenWrt'/g" ./package/base-files/files/bin/config_generate
 #修改连接数
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.conf
+sed -i '5i\uci set luci.main.mediaurlbase=/luci-static/openwrt2020' package/lean/default-settings/files/zzz-default-settings
 
 rm -rf package/lean/autocore
 echo " ____  _                        _      ___                __        __    _   " > package/base-files/files/etc/banner
