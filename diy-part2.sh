@@ -32,8 +32,9 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #删除watchcat
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 #rm -rf feeds/packages/utils/watchcat
-rm -rf feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
 
 
@@ -54,26 +55,27 @@ rm -rf feeds/packages/lang/golang
 #git clone https://github.com/oceanromain/watchcat.git feeds/packages/utils/watchcat
 #git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 
-git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
-git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
+#git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
+##it clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+#it clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
 
 #修改
 #sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
 #sed -i '7s/control/system/g' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua 
 #sed -i '7i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
-#sed -i '8d' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua    
-sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
-sed -i '9d' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+#sed -i '8d' package/luci-app-rebootschedule/luasrc/controller/rebootschedule.lua   
 #sed -i 's/R22.11.11/R22.12.1/g' ./package/lean/default-settings/files/zzz-default-settings
-sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reboot/po/zh-cn/advanced-reboot.po
 #chmod +x package/luci-app-rebootschedule/root/etc/init.d/rebootschedule
-chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
-chmod +x feeds/oceanweb/luci-app-autotimeset/root/etc/init.d/autotimeset
-chmod +x feeds/oceanweb/luci-app-beardropper/root/etc/init.d/beardropper
-chmod +x feeds/oceanweb/luci-app-cowbping/root/etc/init.d/cowbping
 #chmod +x feeds/oceanweb/luci-app-oled/root/etc/init.d/oled
-sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
+#20241025
+#sed -i '8i \ \ \ \ \ \ \ \ entry({"admin", "control"}, firstchild(), "控制", 44).dependent = false' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+#sed -i '9d' ./feeds/oceanweb/luci-app-autotimeset/luasrc/controller/autotimeset.lua 
+#sed -i 's/高级重启/关机/g' ./feeds/luci/applications/luci-app-advanced-reboot/po/zh-cn/advanced-reboot.po
+#chmod +x feeds/kenzo/luci-app-lucky/luci-app-lucky/root/etc/init.d/lucky 
+#chmod +x feeds/oceanweb/luci-app-autotimeset/root/etc/init.d/autotimeset
+#chmod +x feeds/oceanweb/luci-app-beardropper/root/etc/init.d/beardropper
+#chmod +x feeds/oceanweb/luci-app-cowbping/root/etc/init.d/cowbping
+#sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
 
 #修复brook
 #rm -rf feeds/small/brook/patches/*
