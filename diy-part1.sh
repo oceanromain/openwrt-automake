@@ -30,4 +30,5 @@
 #echo "src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main" >> "feeds.conf.default"
 #echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
 #20241025
-echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
+#echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
+echo 'src-git nxx https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
