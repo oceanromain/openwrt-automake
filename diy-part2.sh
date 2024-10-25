@@ -18,7 +18,7 @@ sed -i "/uci commit system/i\uci set system.@system[0].hostname='StarNet'" packa
 sed -i "s/hostname='OpenWrt'/hostname='OpenWrt'/g" ./package/base-files/files/bin/config_generate
 #修改连接数
 echo "net.netfilter.nf_conntrack_max=165535" >> package/base-files/files/etc/sysctl.conf
-sed -i '5i\uci set luci.main.mediaurlbase=/luci-static/openwrt2020' package/lean/default-settings/files/zzz-default-settings
+#sed -i '5i\uci set luci.main.mediaurlbase=/luci-static/openwrt2020' package/lean/default-settings/files/zzz-default-settings
 
 rm -rf package/lean/autocore
 echo " ____  _                        _      ___                __        __    _   " > package/base-files/files/etc/banner
@@ -32,9 +32,8 @@ echo "                        %D %V %C                         " >> package/base
 echo "------------------------------------------------------------------------------" >> package/base-files/files/etc/banner
 
 #删除watchcat
-rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
 #rm -rf feeds/packages/utils/watchcat
-#rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
 
 
@@ -56,8 +55,8 @@ rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftabl
 #git clone https://github.com/gngpp/luci-app-watchcat-plus.git package/luci-app-watchcat-plus
 
 #git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
-##it clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 #it clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 #修改
 #sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
