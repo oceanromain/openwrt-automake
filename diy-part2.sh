@@ -35,6 +35,8 @@ echo "--------------------------------------------------------------------------
 #rm -rf feeds/packages/utils/watchcat
 rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
+rm -rf feeds/luci/applications/luci-app-softether
+
 
 #增加插件
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
