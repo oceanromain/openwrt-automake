@@ -26,7 +26,7 @@ echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages.git' >>feeds.con
 #echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >>feeds.conf.default
 #echo 'src-git ddns_go https://github.com/sirpdboy/luci-app-ddns-go' >>feeds.conf.default
 #echo 'src-git autocore https://github.com/oceanromain/myautocore package/myautocore' >>feeds.conf.default
-echo 'src-git oceanweb https://github.com/oceanromain/my-openwrt-package.git' >>feeds.conf.default
+#echo 'src-git oceanweb https://github.com/oceanromain/my-openwrt-package.git' >>feeds.conf.default
 echo "src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main" >> "feeds.conf.default"
 #echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
 #20241025
