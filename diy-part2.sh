@@ -36,7 +36,6 @@ echo "--------------------------------------------------------------------------
 rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
 
-
 #增加插件
 #git clone https://github.com/gngpp/luci-app-wireguard-ui package/wireguard-ui
 #svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome package/luci-app-adguardhome
