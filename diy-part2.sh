@@ -35,7 +35,7 @@ echo "--------------------------------------------------------------------------
 #rm -rf feeds/packages/utils/watchcat
 rm -rf feeds/packages/lang/golang
 #rm -rf feeds/kenzo/*adguardhome*
-rm -rf feeds/luci/applications/luci-app-softether
+#rm -rf feeds/luci/applications/luci-app-softether
 
 
 #增加插件
