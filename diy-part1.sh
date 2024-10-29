@@ -32,4 +32,4 @@ echo 'src-git oceanweb https://github.com/oceanromain/my-openwrt-package.git' >>
 #20241025
 #echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
 #echo 'src-git nxx https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
-sed -i '/;openwrt-23.05/d' feeds.conf.default
+sed -i 's/;openwrt-23.05//g' feeds.conf.default
