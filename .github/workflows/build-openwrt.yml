@@ -84,7 +84,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        sudo ln -sf /usr/pkg/bin/gas /usr/bin/as
 
 
     - name: 克隆源代码
