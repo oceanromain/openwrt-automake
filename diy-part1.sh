@@ -33,4 +33,3 @@ echo 'src-git oceanweb https://github.com/oceanromain/my-openwrt-package.git' >>
 #echo 'src-git small_all https://github.com/kenzok8/small-package.git' >> feeds.conf.default
 #echo 'src-git nxx https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
 sed -i 's/;openwrt-23.05//g' feeds.conf.default
-#echo 'src-git netmaker http://github.com/sbilly/netmaker-openwrt.git' >>feeds.conf.default
