@@ -61,8 +61,8 @@ git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 #修改
 #20250125
-sed -i 's/PKG_VERSION:=5.25.0/PKG_VERSION:=5.17.0/' feeds/small/v2ray-plugin/Makefile
-sed -i 's/64d2cc376c16ade97b8e2cce69e0c98d74f530dcf8a30cf7d22255969ca5c10d/035823fa70d0c7e6afa6cced6b9d6f8b29c05a5f28852ad5954e957b61337c9e/' feeds/small/v2ray-plugin/Makefile
+#sed -i 's/PKG_VERSION:=5.25.0/PKG_VERSION:=5.17.0/' feeds/small/v2ray-plugin/Makefile
+#sed -i 's/64d2cc376c16ade97b8e2cce69e0c98d74f530dcf8a30cf7d22255969ca5c10d/035823fa70d0c7e6afa6cced6b9d6f8b29c05a5f28852ad5954e957b61337c9e/' feeds/small/v2ray-plugin/Makefile
 
 #20250125
 #sed -i 's#\/usr\/bin\/AdGuardHome\/AdGuardHome#\/usr\/bin\/AdGuardHome#g' package/luci-app-adguardhome/root/etc/config/AdGuardHome
