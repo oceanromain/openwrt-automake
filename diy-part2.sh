@@ -57,7 +57,7 @@ rm -rf feeds/packages/lang/golang
 
 git clone https://github.com/KFERMercer/luci-app-tcpdump.git package/luci-app-tcpdump
 #git clone https://github.com/sirpdboy/chatgpt-web.git package/luci-app-chatgpt
-git clone https://github.com/kenzok8/golang -b 1.24 feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang  feeds/packages/lang/golang
 
 #修改
 #20250125
