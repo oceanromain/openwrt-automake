@@ -70,7 +70,23 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         sudo -E timedatectl set-timezone "Asia/Shanghai"
+ 
+    - name: 清理磁盘
+    on： push
 
+    jobs:
+      free-disk-space:
+        runs-on: ubuntu-22.04
+        steps:
+          - name: Free Disk Space
+            uses: jlumbroso/free-disk-space@main
+            with:
+              tool-cache: false
+              usrmisc: true
+              usrlocal: true
+              opt: true
+              varchache: true
+              debug: false
 
     - name: 克隆源代码
       working-directory: /workdir
