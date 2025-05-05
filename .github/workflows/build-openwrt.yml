@@ -49,7 +49,7 @@ jobs:
         usrmisc: true
         userlocal: true
         opt: true
-        varcache: true
+        varcache: false
         debug: false
 
     - name: 初始化环境
