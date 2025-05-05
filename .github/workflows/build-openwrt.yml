@@ -36,22 +36,21 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
-    - name: 检查
-      uses: actions/checkout@main
+    - name: 清理
+      uses: thiagokokada/free-disk-space@main
     
     - name: 释放磁盘空间
-      uses: jlumbroso/free-disk-space@main
+      uses: thiagokokada/free-disk-space@main
       with:
         tool-cache: false
-        android: true
-        dotnet: true
-        haskell: true
-        large-packages: true
-        docker-images: true
-        swap-storage: true
+        usrmisc: true
+        userlocal: true
+        opt: true
+        varcache: true
+        debug: false
 
     - name: 初始化环境
       env:
@@ -70,23 +69,6 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         sudo -E timedatectl set-timezone "Asia/Shanghai"
- 
-    - name: 清理磁盘
-    on： push
-
-    jobs:
-      free-disk-space:
-        runs-on: ubuntu-22.04
-        steps:
-          - name: Free Disk Space
-            uses: jlumbroso/free-disk-space@main
-            with:
-              tool-cache: false
-              usrmisc: true
-              usrlocal: true
-              opt: true
-              varchache: true
-              debug: false
 
     - name: 克隆源代码
       working-directory: /workdir
