@@ -42,17 +42,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
     
-    - name: 释放空间
-      uses: thiagokokada/free-disk-space@main
-      with:
-        tool-cache: false
-        usrmisc: false
-        usrlocal: false
-        varcache: false
-        opt: false
-        debug: false
-
-    - name: 初始化环境
+     - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
