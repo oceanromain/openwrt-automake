@@ -39,19 +39,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - name: 清理
-      uses: thiagokokada/free-disk-space@main
+    - name: Checkout
+      uses: actions/checkout@main
     
-    - name: 释放磁盘空间
-      uses: thiagokokada/free-disk-space@main
-      with:
-        tool-cache: false
-        usrmisc: true
-        userlocal: true
-        opt: true
-        varcache: false
-        debug: false
-
     - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
