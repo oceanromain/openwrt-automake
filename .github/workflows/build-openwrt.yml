@@ -45,11 +45,11 @@ jobs:
     - name: 释放空间
       uses: thiagokokada/free-disk-space@main
       with:
-        tool-cache: true
+        tool-cache: false
         usrmisc: false
         usrlocal: false
-        varcache: true
-        opt: true
+        varcache: false
+        opt: false
         debug: false
 
     - name: 初始化环境
