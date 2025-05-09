@@ -60,6 +60,12 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
         sudo -E timedatectl set-timezone "Asia/Shanghai"
 
+    - name: 释放空间
+      with:
+        tool-cache: true
+        varcache: true
+        opt: true
+          
     - name: 克隆源代码
       working-directory: /workdir
       run: |
